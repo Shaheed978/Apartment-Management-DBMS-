@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Tenants</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='show_tenants.css') }}">
+</head>
+<body>
+    <h1>List of Tenants</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Occupation</th>
+        </tr>
+        {% for tenant in tenants %}
+            <tr>
+                <td>{{ tenant[1] }}</td>
+                <td>{{ tenant[2] }}</td>
+                <td>{{ tenant[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

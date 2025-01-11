@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lease Apartment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='add_lease_apartment.css') }}">
+</head>
+<body>
+    <h1>Add New Lease Apartment</h1>
+    <form action="{{ url_for('add_lease_apartment') }}" method="post">
+        <label for="tenant_id">Tenant ID:</label><br>
+        <input type="text" id="tenant_id" name="tenant_id"><br>
+        <label for="apartment_number">Apartment Number:</label><br>
+        <input type="text" id="apartment_number" name="apartment_number"><br>
+        <label for="check_in_date">Check-in Date:</label><br>
+        <input type="date" id="check_in_date" name="check_in_date"><br>
+        <label for="check_out_date">Check-out Date:</label><br>
+        <input type="date" id="check_out_date" name="check_out_date"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

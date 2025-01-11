@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Leased Apartments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='show_leased_apartments.css') }}">
+</head>
+<body>
+    <h1>Leased Apartments</h1>
+    <table>
+        <tr>
+            <th>Apartment Number</th>
+            <th>Tenant ID</th>
+            <th>Check-in Date</th>
+            <th>Check-out Date</th>
+        </tr>
+        {% for apartment in leased_apartments %}
+            <tr>
+                <td>{{ apartment[0] }}</td>
+                <td>{{ apartment[1] }}</td>
+                <td>{{ apartment[2] }}</td>
+                <td>{{ apartment[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
